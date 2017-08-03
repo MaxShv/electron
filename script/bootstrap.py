@@ -31,7 +31,7 @@ def main():
   if sys.platform == 'cygwin':
     update_win32_python()
 
-  update_submodules()
+  #update_submodules()
 
   libcc_source_path = args.libcc_source_path
   libcc_shared_library_path = args.libcc_shared_library_path
@@ -232,9 +232,9 @@ def get_libchromiumcontent_commit():
     return commit
 
   # Extract full SHA-1 of libcc submodule commit
-  output = execute(['git', 'submodule', 'status', 'vendor/libchromiumcontent'])
-  commit = re.split('^(?:\s*)([a-f0-9]{40})(?:\s+)', output)[1]
-  return commit
+  #output = execute(['git', 'submodule', 'status', 'vendor/libchromiumcontent'])
+  #commit = re.split('^(?:\s*)([a-f0-9]{40})(?:\s+)', output)[1]
+  return '92e2d6a9657444dfbdcb89f986c8705bdda3dccf'
 
 
 def mkdir_p(path):
